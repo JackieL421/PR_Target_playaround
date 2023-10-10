@@ -7,11 +7,11 @@ on:
       - main
 jobs:
   Run-Docker-Install:
-    runs-on: [self-hosted, Linux, X64]
+    runs-on: ubuntu-latest
     steps:
       - name: Check Out Code
         uses: actions/checkout@v2
         with:
-          ref: '51/img_test_workflow'
+          ref: ${{ github.event.pull_request.head.sha }}
       - name: run test command
         run: echo 'Hello World'
