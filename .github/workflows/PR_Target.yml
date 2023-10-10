@@ -14,4 +14,4 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: run test command
-        run: docker build
+        run: docker build -t
