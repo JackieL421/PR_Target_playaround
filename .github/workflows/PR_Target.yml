@@ -13,4 +13,5 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: '51/img_test_workflow'
+      - name: run test command
         run: echo 'Hello World'
