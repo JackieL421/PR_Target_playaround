@@ -1,0 +1,16 @@
+name: Docker Validation
+on:
+  pull_request_target:
+    types:
+      - opened
+    branches:
+      - main
+jobs:
+  Run-Docker-Install:
+    runs-on: [self-hosted, Linux, X64]
+    steps:
+      - name: Check Out Code
+        uses: actions/checkout@v2
+        with:
+          ref: '51/img_test_workflow'
+        run: echo 'Hello World'
